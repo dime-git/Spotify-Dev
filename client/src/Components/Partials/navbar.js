@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <Navbar>
             <Container>
-                <Navbar.Brand href="/">Navbar with text</Navbar.Brand>
+                <Navbar.Brand href="/">Your Spotify </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
