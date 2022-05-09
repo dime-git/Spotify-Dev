@@ -1,0 +1,25 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client-start": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client-start\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "",
+    "express": "",
+    "body-parser": "",
+    "axios": "",
+    "querystring": ""
+  },
+  "devDependencies": {
+    "nodemon": "",
+    "concurrently": ""
+  }
+}
