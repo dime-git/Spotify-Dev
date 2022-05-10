@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 
 
-function Navbar() {
+
+const Header =() => {
     return (
         <Navbar>
             <Container>
@@ -18,4 +19,4 @@ function Navbar() {
     )
 }
 
-export default Navbar;
+export default Header;
