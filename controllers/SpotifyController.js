@@ -7,9 +7,9 @@ class SpotifyController extends BaseController {
         this.spotifyService = spotifyService || new SpotifyService()
     }
 
-    async test() {
+    async getCategories() {
         try {
-            const { test } = this._req.body
+            const { getCategories } = this._req.body
 
             const categories = await this.spotifyService.getCategories()
 

@@ -12,12 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "",
+    "axios": "^0.27.2",
     "body-parser": "",
     "bootstrap": "^5.1.3",
     "express": "",
     "node": "",
-    "querystring": ""
+    "querystring": "",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "concurrently": "",
