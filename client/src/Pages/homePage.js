@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SpotifyCategory from '../Components/Categories/SpotifyCategory';
 import { getCategories } from '../../src/redux/Spotify/spotify.actions';
+import SpotifyCategory from '../Components/Categories/SpotifyCategory';
 
 function Homepage() {
     const dispatch = useDispatch();
@@ -12,11 +12,11 @@ function Homepage() {
         dispatch(getCategories())
     }, [])
 
-
+    
     return (
         <div className="container">
             {categories?.categories?.items !== undefined && categories?.categories?.items.map((item, idx) => {
-                return <SpotifyCategory key={idx} imgUrl={item?.icons[0]?.url} categoryName={item?.name} />
+                return <SpotifyCategory key={idx} imgUrl={item.icons[0].url} categoryName={item.name} />
             })}
         </div>
     )
