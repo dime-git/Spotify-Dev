@@ -3,6 +3,7 @@ const clientSecret = '0e7e5eba045746fc80754f7d91fd23f9'
 const { stringify } = require('querystring')
 
 const axios = require('axios')
+const { resourceLimits } = require('worker_threads')
 
 class SpotifyPackage {
     constructor(clientId, clientSecret) {
@@ -33,11 +34,24 @@ class SpotifyPackage {
 
     async getCategories() {
         try {
-            const { data } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories`)
+            const { data: {categories} } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories`)
 
-            return data
+            return categories
         } catch (err) {
             console.log(err)
+        }
+    }
+
+    async getPlaylistsByCategories(categoryId) {
+        try {
+
+            const { data: {playlists} } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories/${categoryId})/playlists`)
+
+            return playlists
+           
+
+        } catch (error) {
+            console.log(error)
         }
     }
 }

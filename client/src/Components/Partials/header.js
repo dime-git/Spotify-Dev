@@ -3,10 +3,10 @@ import { Container, Navbar } from 'react-bootstrap';
 
 
 
-const Header =() => {
+const Header = () => {
     return (
         <Navbar>
-            <Container>
+            <Container >
                 <Navbar.Brand href="/">Your Spotify </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">

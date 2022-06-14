@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import LoginButton from '../Components/Login/LoginButton';
+import LoginButton from '../Components/Buttons/LoginButton';
 
 function Login() {
     return (

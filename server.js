@@ -9,4 +9,4 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use('/spotify', SpotifyRouter)
 
-app.listen(5000)
+app.listen(6000)
