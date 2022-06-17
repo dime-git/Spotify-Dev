@@ -22,10 +22,9 @@ class SpotifyController extends BaseController {
     async getPlaylistsByCategories() {
         try {
 
-            const { getPlaylistsByCategories } = this._req.params.id
-            console.log()
+            const { category_id } = this._req.params
 
-            const playlists = await this.spotifyService.getPlaylistsByCategories()
+            const playlists = await this.spotifyService.getPlaylistsByCategories(category_id)
 
             this.dto({ playlists })
         } catch (error) {

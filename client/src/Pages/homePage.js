@@ -14,7 +14,7 @@ function Homepage() {
 
     return (
         <div className="container">
-            {categories?.categories?.categories?.items !== undefined && categories?.categories?.categories?.items.map((item, idx) => {
+            {categories?.categories?.items !== undefined && categories?.categories?.items.map((item, idx) => {
                 return <SpotifyCategory key={idx} imgUrl={item?.icons[0]?.url} categoryName={item?.name} />
             })}
         </div>

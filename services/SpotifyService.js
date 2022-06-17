@@ -1,15 +1,13 @@
-const SpotifyInstance = require('../packages/SpotifyPackage')
+const SpotifyInstance = require('../packages/SpotifyPackage');
 
 class SpotifyService {
     async getCategories() {
-        const categories = await SpotifyInstance.getCategories()
-        return categories
+        return await SpotifyInstance.getCategories()
+        
     }
 
-    async getPlaylistsByCategories() {
-        const playlists = await SpotifyInstance.getPlaylistsByCategories()
-        return playlists
+    async getPlaylistsByCategories(category_id) {
+        return await SpotifyInstance.getPlaylistsByCategories(category_id)
     }
 }
-
 module.exports = SpotifyService

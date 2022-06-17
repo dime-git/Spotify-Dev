@@ -16,3 +16,4 @@ export const getCategories = () => async dispatch => {
         console.log(error)
     }
 }
+

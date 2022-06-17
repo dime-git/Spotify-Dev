@@ -34,23 +34,28 @@ class SpotifyPackage {
 
     async getCategories() {
         try {
-            const { data: {categories} } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories`)
+            const { data: { categories } } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories`)
 
             return categories
+
         } catch (err) {
             console.log(err)
         }
     }
 
-    async getPlaylistsByCategories(categoryId) {
+
+    async getPlaylistsByCategories(category_id) {
         try {
 
-            const { data: {playlists} } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories/${categoryId})/playlists`)
+            const { data: { playlists } } = await this.axiosInstance.get(`${this.baseUrl}/browse/categories/${category_id}/playlists`, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
 
             return playlists
-           
 
-        } catch (error) {
+        } catch (error) { 
             console.log(error)
         }
     }
